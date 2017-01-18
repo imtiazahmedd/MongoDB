@@ -1,0 +1,22 @@
+1:-show dbs
+2:-db
+3:-use dbname
+4:- show collections
+5:- db.student.insert({name : 'imtiaz', age : 33});
+6:- db.student.find().pretty()
+7:- db.student.findOne({name : 'imtiaz'});
+8:- db.student.find({}, {_id : 0})
+9:- db.student.find({}, {_id : 1})
+10:-db.student.find().sort({age : 1});
+11:-db.student.find().sort({age : 0});
+12:-db.student.find().limit(2);
+13:-db.student.find().skip(2);
+14:-db.student.find.sort({name : 1}).limit(2)
+15:-db.student.count();
+16:-db.student.find({name : 'imtiaz'}).count()
+17:- db.student.find({age : {$gt : 30}}) , db.student.find({age : {$gte : 30}})
+18:- db.student.find({age : {$lt : 30}}) , , db.student.find({age : {$lte : 30}})
+19:- db.student.find({name : {$ne : 'imtiaz'}})
+20:- db.student.find({age : {$in : [22, 32]}})
+21:- db.student.find({age : {$in : [22, 32]}})
+22:- db.student.find({name : 'ahmed'}, {age : 23})
