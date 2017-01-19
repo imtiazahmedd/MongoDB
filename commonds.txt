@@ -2,6 +2,7 @@
 2:-db
 3:-use dbname
 4:- show collections
+23:-db.dropDatabase()
 5:- db.student.insert({name : 'imtiaz', age : 33});
 6:- db.student.find().pretty()
 7:- db.student.findOne({name : 'imtiaz'});
@@ -20,3 +21,14 @@
 20:- db.student.find({age : {$in : [22, 32]}})
 21:- db.student.find({age : {$in : [22, 32]}})
 22:- db.student.find({name : 'ahmed'}, {age : 23})
+24:- db.student.drop()
+25:- db.student.update({name : 'first_name'}, {name : 'last_name'});
+26:- db.student.update({age : 211} , {$inc : {age : 10}})
+27:- db.student.remove({'name' : 'last_name'})
+28:-db.student.insert({
+name : 'first_name',
+age : 32,
+contach :[{
+ptcl : '23233333333332',
+mobile : '99999999932'}]
+})
